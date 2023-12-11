@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Row  , Col, Container} from 'reactstrap';
+import { Categories } from './categories';
+import { NavView } from './navi';
+import { Products } from './products';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <NavView></NavView>
+      </Row>
+      <Row>
+        <Col>
+          <Categories></Categories>
+        </Col> 
+        <Col>
+          <Products></Products>
+        </Col>   
+        <Col>
+        </Col>       
+      </Row>
+    </Container>
+  
+
   );
 }
 
